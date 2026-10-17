@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Favorite Person ❤️</title>
+<style>
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: #100b14;
+    color: #fff2e8;
+    text-align: center;
+}
+.scene {
+    min-height: 100vh;
+    display: none;
+    padding: 35px 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.scene.active {
+    display: flex;
+    animation: fadeIn 1.2s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.eyebrow {
+    color: #d8ad9c;
+    letter-spacing: 5px;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+h1 {
+    font-size: clamp(35px, 8vw, 65px);
+    font-weight: normal;
+    margin: 22px 0;
+}
+h2 {
+    font-weight: normal;
+    color: #f2c5c5;
+}
+p {
+    line-height: 1.9;
+}
+.poster {
+    width: min(100%, 430px);
+    min-height: 500px;
+    padding: 50px 25px;
+    border: 1px solid #c9a17c;
+    background:
+      radial-gradient(ellipse at top, #693847 0%, #281523 45%, #100b14 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 45px #6d344455;
+}
+.poster .title {
+    font-size: clamp(30px, 7vw, 48px);
+    line-height: 1.25;
+}
+.poster .bottom {
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+button {
+    background: #d5ad9c;
+    color: #21131a;
+    border: none;
+    padding: 15px 26px;
+    margin-top: 24px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+button:hover {
+    background: #f4d7c8;
+}
+.message {
+    width: min(100%, 700px);
+    text-align: left;
+    padding: 30px;
+    border: 1px solid #805766;
+    background: #1c121d;
+    line-height: 2;
+    white-space: pre-line;
+}
+.heart {
+    font-size: 35px;
+    margin: 10px;
+}
+.music-box {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #805766;
+    width: min(100%, 500px);
+}
+audio {
+    width: 100%;
+    margin-top: 12px;
+}
+footer {
+    margin-top: 25px;
+    color: #c7a4ad;
+    font-size: 12px;
+}
+@media (max-width: 480px) {
+    .poster {
+        min-height: 450px;
+    }
+    .message {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+<body>
+<!-- SCENE 1: MOVIE PREMIERE -->
+<section id="scene1" class="scene active">
+    <div class="poster">
+        <div class="eyebrow">
+            A Birthday Special
+        </div>
+        <div>
+            <div class="heart">✦ ♡ ✦</div>
+            <div class="title">
+                For My<br>
+                Favorite<br>
+                Person
+            </div>
+            <p>
+                One heart. One beautiful story.<br>
+                A thousand reasons to celebrate you.
+            </p>
+        </div>
+        <div class="bottom">
+            STARRING MY GANDA ❤️
+        </div>
+    </div>
+    <button onclick="showScene('scene2')">
+        ENTER PREMIERE →
+    </button>
+    <footer>
+        A little film made with a lot of love.
+    </footer>
+</section>
+<!-- SCENE 2: OPENING TITLE -->
+<section id="scene2" class="scene">
+    <div class="eyebrow">
+        Tonight's Special Premiere
+    </div>
+    <h1>To My Favorite Person</h1>
+    <div class="heart">❤️</div>
+    <p>
+        This little film is dedicated to the boy<br>
+        who made my world feel a little more beautiful.
+    </p>
+    <p>
+        Are you ready for your birthday surprise, ganda?
+    </p>
+    <button onclick="startSurprise()">
+        PLAY YOUR SURPRISE 🎬
+    </button>
+</section>
+<!-- SCENE 3: BIRTHDAY LETTER -->
+<section id="scene3" class="scene">
+    <div class="eyebrow">
+        The Most Special Day
+    </div>
+    <h1>Happy Birthday, Ganda! 🎂</h1>
+    <div class="heart">♡ ❤️ ♡</div>
+    <h2>My Greatest Boyfriend</h2>
+    <div class="music-box">
+        <p>🎵 A little song for you</p>
+        <p>
+            Crazier — Taylor Swift<br>
+            <small>Cover by Ysabelle</small>
+        </p>
+        <audio id="birthdaySong" controls preload="none">
+            <source src="music.mp3" type="audio/mpeg">
+            Your browser does not support this audio.
+        </audio>
+        <p>
+            Press play to listen while reading my letter. ❤️
+        </p>
+    </div>
+    <div class="message">
+Happy birthday, my dear! 🎂🎉
+I pray that you get to experience all the happiness that love, life, and wealth can bring you.
+I'm sorry for my attitude lately. I want to thank you for coming into my life. 🥹
+No one has ever made me feel what real love feels like before, but God gifted me with happiness through you. 🥺 And I hope I make you feel the same way too. 😊
+I really want to be honest with you. I admire the way you listen to me so carefully, gently, and calmly. I even admire the way you look at me. ❤️
+Sometimes, I feel a little disappointed in myself because I can't always treat you the same way you treat me. But I promise I'll keep trying to become better for you and for us.
+You are my biggest supporter. 😔❤️ You have become the first person who made me feel safe, and somehow, you also became my favorite person in the whole world.
+I wish you a very long and beautiful life, ganda. May you live to be 100 years old and even older! 🥹❤️
+As long as I'm here, I promise to keep trying to be by your side when you need me. I might not be the best, but I'll always try my best.
+I hope that one day, when we finally meet in real life for the very first time, I can give you the most beautiful birthday celebration. I want that day to become a memory that never fades from your heart. 😊❤️
+Happy twentieth birthday to my greatest boyfriend! 🥰
+Thank you for being born.
+Thank you for coming into my life.
+And thank you for loving me. 🥹❤️‍🩹
+Thank you for making my world feel complete. ❤️
+Ahahahaha, you're old now! 🤭
+Just kidding! Hehehe. I love you, ganda. ❤️
+With all my love,
+Your favorite girl. ♡
+    </div>
+    <div class="heart">❤️</div>
+    <h2>End of Film</h2>
+    <p>
+        But never the end of our story. 🥹
+    </p>
+    <button onclick="showScene('scene1')">
+        WATCH AGAIN ↺
+    </button>
+    <footer>
+        Made with love, just for you. ❤️
+    </footer>
+</section>
+<script>
+function showScene(id) {
+    document.querySelectorAll('.scene').forEach(scene => {
+        scene.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+function startSurprise() {
+    showScene('scene3');
+    const song = document.getElementById('birthdaySong');
+    song.play().catch(() => {
+        // If the browser blocks autoplay,
+        // press the song's play button manually.
+    });
+}
+</script>
+</body>
+</html>
