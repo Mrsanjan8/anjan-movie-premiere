@@ -234,11 +234,20 @@ function showScene(id) {
 }
 function startSurprise() {
     showScene('scene3');
-    const song = document.getElementById('birthdaySong');
-    song.play().catch(() => {
-        // If the browser blocks autoplay,
-        // press the song's play button manually.
-    });
+
+    const player = document.getElementById('youtubePlayerContainer');
+
+    player.innerHTML = `
+        <iframe
+            width="100%"
+            height="200"
+            src="https://www.youtube.com/embed/-Ww8730zgzk?autoplay=1&playsinline=1"
+            title="Crazier - Birthday Song"
+            frameborder="0"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    `;
 }
 </script>
 </body>
