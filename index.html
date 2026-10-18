@@ -215,12 +215,14 @@ Your favorite girl. ♡
         Made with love, just for you. ❤️
     </footer>
 </section>
-<script>
 function showScene(id) {
     document.querySelectorAll('.scene').forEach(scene => {
         scene.classList.remove('active');
     });
-    document.getElementById(id).classList.add('active');
+    const selectedScene = document.getElementById(id);
+    if (selectedScene) {
+        selectedScene.classList.add('active');
+    }
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
@@ -228,36 +230,12 @@ function showScene(id) {
 }
 function startSurprise() {
     showScene('scene3');
-
-   function startSurprise() {
-function showScene(id) {
-document.querySelectorAll(’.scene’).forEach(scene => {
-scene.classList.remove(‘active’);
-});
-
-const selectedScene = document.getElementById(id);
-if (selectedScene) {
-    selectedScene.classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const song = document.getElementById('birthdaySong');
+    if (song) {
+        song.play().catch(error => {
+            console.log('Tap the audio play button to start the music.');
+        });
+    }
 }
-
-}
-
-function startSurprise() {
-const song = document.getElementById(‘birthdaySong’);
-
-if (song) {
-    song.play().catch(error => {
-        console.log('Please press the play button to start the music.');
-    });
-}
-const surprise = document.getElementById('surprise');
-if (surprise) {
-    surprise.style.display = 'block';
-}
-
-}
-}
-</script>
 </body>
 </html>
