@@ -177,8 +177,8 @@ footer {
     <h1>Happy Birthday, Ganda! 🎂</h1>
     <div class="heart">♡ ❤️ ♡</div>
     <h2>My Greatest Boyfriend</h2>
-    <audio id="birthdaySong" loop>
-    <source src="music.mp3" type="audio/mpeg">
+   <audio id="birthdaySong" controls loop>
+    <source src="b78efd67-b728-46a7-80c0-ad237486af80.mp3" type="audio/mpeg">
 </audio>
     </div>
     
@@ -229,19 +229,21 @@ function showScene(id) {
 function startSurprise() {
     showScene('scene3');
 
-    const player = document.getElementById('youtubePlayerContainer');
+   function startSurprise() {
+const song = document.getElementById(“birthdaySong”);
 
-    player.innerHTML = `
-        <iframe
-            width="100%"
-            height="200"
-            src="https://www.youtube.com/embed/-Ww8730zgzk?autoplay=1&playsinline=1"
-            title="Crazier - Birthday Song"
-            frameborder="0"
-            allow="autoplay; encrypted-media; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-    `;
+if (song) {
+    song.play().catch(error => {
+        console.log("Music playback failed:", error);
+    });
+}
+// Show the birthday surprise
+const surprise = document.getElementById("surprise");
+if (surprise) {
+    surprise.style.display = "block";
+}
+
+}
 }
 </script>
 </body>
