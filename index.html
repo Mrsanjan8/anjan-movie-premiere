@@ -230,17 +230,30 @@ function startSurprise() {
     showScene('scene3');
 
    function startSurprise() {
-const song = document.getElementById(“birthdaySong”);
+function showScene(id) {
+document.querySelectorAll(’.scene’).forEach(scene => {
+scene.classList.remove(‘active’);
+});
+
+const selectedScene = document.getElementById(id);
+if (selectedScene) {
+    selectedScene.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+}
+
+function startSurprise() {
+const song = document.getElementById(‘birthdaySong’);
 
 if (song) {
     song.play().catch(error => {
-        console.log("Music playback failed:", error);
+        console.log('Please press the play button to start the music.');
     });
 }
-// Show the birthday surprise
-const surprise = document.getElementById("surprise");
+const surprise = document.getElementById('surprise');
 if (surprise) {
-    surprise.style.display = "block";
+    surprise.style.display = 'block';
 }
 
 }
